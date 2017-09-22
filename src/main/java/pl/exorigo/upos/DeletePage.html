@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h3 align="center">User Info</h3>
+<div class="container" align="center">
+<table align="center">
+    <tr>
+        <th>Id : </th>
+        <td><span wicket:id="id">[id]</span></td>
+    </tr>
+    <tr>
+        <th>Name : </th>
+        <td><span wicket:id="name">[name]</span></td>
+    </tr>
+    <tr>
+        <th>Surname : </th>
+        <td><span wicket:id="surname">[surname]</span></td>
+    </tr>
+    <tr>
+        <th>Password : </th>
+        <td><span wicket:id="password">[password]</span></td>
+    </tr>
+    <tr>
+        <th>Gender : </th>
+        <td><span wicket:id="gender">[gender]</span></td>
+    </tr>
+    <tr>
+        <th>Email : </th>
+        <td><span wicket:id="email">[email]</span></td>
+    </tr>
+</table>
+</div>
+<br/>
+<div class="container" align="center">
+    <a class="btn btn-s btn-danger active" role="button" style="margin: 5px"
+       href="#" wicket:id="delete">Delete</a>
+</div>
+</body>
+</html>

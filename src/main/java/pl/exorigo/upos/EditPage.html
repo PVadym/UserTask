@@ -1,0 +1,69 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Edit User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <p>
+        <form wicket:id="editUserForm">
+            <legend>
+                <wicket:message key="inputMessage"/>
+            </legend>
+            <table cellpadding="3">
+                <div class="form-group">
+                    <label>
+                        <wicket:message key="name"/>
+                    </label>
+                    <label wicket:id="nameFeedback">
+                        <input wicket:id="name" type="text" size="40"/>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <wicket:message key="surname"/>
+                    </label>
+                    <lable wicket:id="surnameFeedback">
+                        <input wicket:id="surname" type="text" size="40"/>
+                    </lable>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <wicket:message key="password"/>
+                    </label>
+                    <label wicket:id="passwordFeedback">
+                        <input wicket:id="password" type="password" size="40"/>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <wicket:message key="gender"/>
+                    </label>
+                    <span wicket:id="gender" id="gender">
+                        <input type="radio">Male</input>
+                        <input type="radio">Female</input>
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <wicket:message key="gender"/>
+                    </label>
+                    <label wicket:id="emailFeedback">
+                        <input wicket:id="email" type="text" size="40"/>
+                    </label>
+                </div>
+
+        <input type="submit" class="btn btn-s btn-success active" role="button" style="margin: 5px"
+               value="Save Changes"/>
+        <input type="submit" class="btn btn-s btn-warning active" role="button" style="margin: 5px" wicket:id="back"
+               value="Back"/>
+    </table>
+    </form>
+</div>
+<div id="feedbackPanel">
+    <span wicket:id="feedback"/>
+</div>
+</body>
+</html>
