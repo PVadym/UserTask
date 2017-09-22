@@ -19,10 +19,11 @@ import java.util.Arrays;
 /**
  * Created by Вадим on 21.09.2017.
  */
-public class EditPage extends WebPage {
+public class EditPage extends WebPage implements AuthenticatedWebPage{
 
     @SpringBean
     private UserDao userDao;
+
     private User user;
 
     public EditPage(){}
@@ -73,15 +74,6 @@ public class EditPage extends WebPage {
             add(emailFeedback);
             emailFeedback.add(email);
 
-
-            add(new Button("back")
-            {
-                @Override
-                public void onSubmit()
-                {
-                    setResponsePage(MainPage.class);
-                }
-            }.setDefaultFormProcessing(false));
         }
 
         @Override

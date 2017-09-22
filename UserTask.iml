@@ -44,6 +44,7 @@
     <orderEntry type="library" name="Maven: com.github.openjson:openjson:1.0.6" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.apache.wicket:wicket-extensions:8.0.0-M6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-auth-roles:8.0.0-M6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.wicket:wicket-spring:8.0.0-M6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.wicket:wicket-ioc:8.0.0-M6" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib:3.2.5" level="project" />

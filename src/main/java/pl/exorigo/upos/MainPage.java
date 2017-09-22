@@ -2,7 +2,6 @@ package pl.exorigo.upos;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.PropertyModel;
@@ -15,7 +14,7 @@ import java.util.List;
 /**
  * Created by Вадим on 20.09.2017.
  */
-public class MainPage extends WebPage {
+public class MainPage extends WebPage implements AuthenticatedWebPage {
     @SpringBean
     private UserDao userDao;
 
@@ -35,16 +34,6 @@ public class MainPage extends WebPage {
             }
         });
 
-        add(new Link<Void>("addNew")
-        {
-            private static final long serialVersionUID = 1L;
-
-            @Override
-            public void onClick()
-            {
-                setResponsePage(AddNewPage.class);
-            }
-        });
     }
 
 }

@@ -10,15 +10,13 @@ import pl.exorigo.upos.entity.User;
 /**
  * Created by Вадим on 22.09.2017.
  */
-public class DeletePage extends WebPage {
+public class DeletePage extends WebPage implements AuthenticatedWebPage {
 
     @SpringBean
     private UserDao userDao;
 
-
     public DeletePage() {
     }
-
 
     public DeletePage(User user) {
 
@@ -29,15 +27,6 @@ public class DeletePage extends WebPage {
         add(new Label("gender", user.getGender().name()));
         add(new Label("email", user.getEmail()));
 
-
-//        add(new Button("delete")
-//        {
-//            @Override
-//            public void onSubmit()
-//            {
-//                setResponsePage(MainPage.class);
-//            }
-//        }.setDefaultFormProcessing(false));
         add(new Link<Void>("delete")
         {
             private static final long serialVersionUID = 1L;
@@ -49,9 +38,6 @@ public class DeletePage extends WebPage {
                 setResponsePage(MainPage.class);
             }
         });
-
-
-
     }
 
     public Link<Void> link(String remove, User user) {
@@ -64,6 +50,5 @@ public class DeletePage extends WebPage {
             }
         };
     }
-
 
 }

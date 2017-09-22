@@ -67,9 +67,6 @@ public class AddNewPage extends WebPage {
             }.setDefaultFormProcessing(false));
         }
 
-        /**
-         * @see org.apache.wicket.markup.html.form.Form#onSubmit()
-         */
         @Override
         public void onSubmit()
         {
