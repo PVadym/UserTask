@@ -1,3 +1,13 @@
+WEB application "Users base"
+
+Created for Exorigo-Upos sp. z o.o.
+
+Pylypchenko Vadym 23.09.2017
+
+==========================================================================
+
+-- SQl query for create DB and tables --
+
 DROP DATABASE IF EXISTS usersdb;
 CREATE DATABASE IF NOT EXISTS usersdb
   DEFAULT CHARACTER SET utf8;
@@ -15,11 +25,3 @@ CREATE TABLE IF NOT EXISTS users (
 )
   ENGINE = InnoDB;
 
--- populate DB
-
-INSERT INTO users VALUES (1,'Vadym','Pylypchenko','11111','MALE','vadym@ukr.net');
-INSERT INTO users VALUES (2,'Tanya','Kovalenko','22222','FEMALE','tanya@ukr.net');
-INSERT INTO users VALUES (3,'Vasya','Ivasik','33333','MALE','vasya@ukr.net');
-INSERT INTO users VALUES (4,'Kolay','Ovsuk','44444','MALE','kolya@ukr.net');
-INSERT INTO users VALUES (5,'Tolya','Petrov','55555','MALE','tolya@ukr.net');
-INSERT INTO users VALUES (6,'Ivan','Ivanov','66666','MALE','ivan@ukr.net');
