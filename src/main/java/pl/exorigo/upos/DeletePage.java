@@ -16,6 +16,7 @@ public class DeletePage extends WebPage implements AuthenticatedWebPage {
     private UserDao userDao;
 
     public DeletePage() {
+
     }
 
     public DeletePage(User user) {
@@ -40,7 +41,8 @@ public class DeletePage extends WebPage implements AuthenticatedWebPage {
         });
     }
 
-    public Link<Void> link(String remove, User user) {
+
+    public Link<Void> linkDelete(String remove, User user) {
         return new Link<Void>(remove)
         {
             @Override
@@ -49,6 +51,19 @@ public class DeletePage extends WebPage implements AuthenticatedWebPage {
                 setResponsePage(new DeletePage(user));
             }
         };
+    }
+
+    public Link<Void> linkInfo(final String name, final User user)
+    {
+        Link<Void> link = new Link<Void>(name) {
+            @Override
+            public void onClick() {
+                setResponsePage(new DeletePage(user));
+            }
+        };
+        link.add(new Label("name", user.getName()));
+        return link;
+
     }
 
 }

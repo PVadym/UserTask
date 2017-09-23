@@ -31,11 +31,9 @@ public class EditPage extends WebPage implements AuthenticatedWebPage{
     public EditPage(User user) {
 
         add(new FeedbackPanel("feedback"));
-
         add(new EditUserForm("editUserForm", user));
 
     }
-
 
      public final class EditUserForm extends Form<User>
     {
