@@ -95,13 +95,6 @@
 		</dependency>
 
 
-		<!-- OPTIONAL 
-			<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-extensions</artifactId>
-			<version>${wicket.version}</version>
-			</dependency>
-		-->
 
 		<!-- Logs -->
 		<dependency>
@@ -123,26 +116,6 @@
 				 <scope>test</scope>
 		 </dependency>
 
-		<!--  JETTY DEPENDENCIES FOR TESTING  -->
-
-		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>jetty</artifactId>
-			<version>${jetty.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>jetty-util</artifactId>
-			<version>${jetty.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>jetty-management</artifactId>
-			<version>${jetty.version}</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>dbcp</artifactId>
@@ -185,10 +158,6 @@
 			</testResource>
 		</testResources>
 		<plugins>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>maven-jetty-plugin</artifactId>
-			</plugin>
 
 			<!-- Compiler plugin -->
 			<plugin>
@@ -207,6 +176,11 @@
 				<version>3.0.0</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<archive>
+						<manifest>
+							<mainClass>pl.exorigo.upos.WicketApplication</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 
